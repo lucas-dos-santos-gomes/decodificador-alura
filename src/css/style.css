@@ -6,11 +6,7 @@
 
 html {
     font-size: 10px;
-    background-color: #acd3e9;
-}
-
-main {
-    width: 100%;
+    background-color: #ACD3E9;
 }
 
 body {
@@ -23,11 +19,114 @@ body {
     box-sizing: border-box;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex-grow: 1;
+    flex-basis: auto;
+
+    padding: 20px 5vw 20px 7vw;
+}
+
+main .container textarea {
+    width: 90%;
+    height: 50vh;
+    padding: 1rem;
+
+    overflow: auto;
+    outline:none;
+    resize:none;
+
+    background-color: #ACD3E9;
+    color: #0A3871;
+    font-size: 2.5rem;
+}
+
+main .container textarea::placeholder {
+    color: #0A3871;
+}
+
+main .container textarea::-webkit-scrollbar{
+    width: 10px;
+}
+
+main .container textarea::-webkit-scrollbar-track{
+    background: #070d12;
+    border-radius: 50px;
+}
+
+main .container textarea::-webkit-scrollbar-thumb{
+    background-color: #0A3871;
+    border-radius: 20px;
+    border: 3px solid #070d12;
+}
+
+main .container .botoes div {
+    display: flex;
+}
+
+main .container .botoes div p {
+    align-self: center;
+    margin: 0 0 0 7px;
+}
+
+main .container .botoes ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .container .botoes ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+    width: 45%;
+    padding: 2rem 0;
+    margin: 1rem 0 0;
+    border-radius: 1.5rem;
+
+    transition: 200ms transform, 200ms opacity;
+}
+
+main .container .botoes ul li:first-child {
+    background-color: #0A3871;
+    color: #FFF;
+}
+
+main .container .botoes ul li:last-child {
+    background-color: #B2B4B8;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+main .container .botoes ul li:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.botao1:hover + .botao2 {
+    opacity: 0.3;
+}
+
+.botao2:hover + .botao1 {
+    opacity: 0.3;
+}
 
 /* SECTION: DISPLAY DO TEXTO */
 
 .display-texto {
-    width: 320px;
+    width: 40%;
+    min-width: 250px;
 }
 
 .display-texto .container {
