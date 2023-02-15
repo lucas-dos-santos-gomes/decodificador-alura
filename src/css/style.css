@@ -38,9 +38,10 @@ main .container {
 }
 
 main .container textarea {
-    width: 90%;
+    width: 100%;
     height: 50vh;
     padding: 1rem;
+    box-sizing: border-box;
 
     overflow: auto;
     outline:none;
@@ -60,14 +61,14 @@ main .container textarea::-webkit-scrollbar{
 }
 
 main .container textarea::-webkit-scrollbar-track{
-    background: #070d12;
+    background: #FFF;
     border-radius: 50px;
 }
 
 main .container textarea::-webkit-scrollbar-thumb{
     background-color: #0A3871;
     border-radius: 20px;
-    border: 3px solid #070d12;
+    border: 2px solid #FFF;
 }
 
 main .container .botoes div {
@@ -114,11 +115,7 @@ main .container .botoes ul li:hover {
     cursor: pointer;
 }
 
-.botao1:hover + .botao2 {
-    opacity: 0.3;
-}
-
-.botao2:hover + .botao1 {
+li.transparente {
     opacity: 0.3;
 }
 
@@ -127,6 +124,7 @@ main .container .botoes ul li:hover {
 .display-texto {
     width: 40%;
     min-width: 250px;
+    max-width: 300px;
 }
 
 .display-texto .container {
