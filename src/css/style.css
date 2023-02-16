@@ -40,7 +40,7 @@ main .container {
 main .container textarea {
     width: 100%;
     height: 50vh;
-    padding: 1rem;
+    padding: 10px;
     box-sizing: border-box;
 
     overflow: auto;
@@ -110,12 +110,12 @@ main .container .botoes ul li:last-child {
     border: 1px solid #0A3871;
 }
 
-main .container .botoes ul li:hover {
+main .container .botoes ul li:hover, .botao-copiar:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
 
-li.transparente {
+.transparente {
     opacity: 0.3;
 }
 
@@ -127,7 +127,7 @@ li.transparente {
     max-width: 300px;
 }
 
-.display-texto .container {
+.display-texto .container-padrao {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,9 +137,10 @@ li.transparente {
     width: 100%;
     height: 100%;
     border-radius: 30px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.display-texto .container .img-procurando {
+.display-texto .container-padrao .img-procurando {
     width: 80%;
 }
 
@@ -151,9 +152,68 @@ li.transparente {
     margin: 1.2rem 0;
 }
 
-.display-texto .container p {
+.display-texto .container-padrao p {
     display: inline-block;
     text-align: center;
     font-size: 1.2rem;
     padding: 0 5%;
+}
+
+.display-texto .container-mensagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.display-texto .container-mensagem p {
+    height: 60vh;
+    overflow-y: auto;
+
+    font-size: 2rem;
+    color: #495057;
+}
+
+.display-texto .container-mensagem p::-webkit-scrollbar{
+    width: 10px;
+}
+
+.display-texto .container-mensagem p::-webkit-scrollbar-track{
+    background: #FFF;
+    border-radius: 50px;
+}
+
+.display-texto .container-mensagem p::-webkit-scrollbar-thumb{
+    background-color: #0A3871;
+    border-radius: 20px;
+    border: 3px solid #FFF;
+}
+
+.display-texto .container-mensagem .botao-copiar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #0A3871;
+    font-size: 1.5rem;
+
+    width: 100%;
+    padding: 2rem 0;
+    margin: 1rem 0 0;
+    border: 1px solid #0A3871;
+    border-radius: 1.5rem;
+
+    transition: 200ms transform;
+}
+
+#esconder {
+    display: none;
 }
