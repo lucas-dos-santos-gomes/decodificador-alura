@@ -68,18 +68,34 @@ botaoCopiar.addEventListener("click", () => {
     document.execCommand("copy");
 });
 
+function focar() {
+    textAreaHover.focus();
+}
+
 textArea.addEventListener("keydown", e => {
     if(e.key == "Delete" && e.shiftKey == true) {
         textArea.value = "";
     }
     
-    if(e.key == "Enter" && e.shiftKey == true) {
+    if(e.key == "Enter" && e.altKey == true && e.shiftKey == false) {
         trocarId(e);
         criptografar(textArea.value);
     }
     
-    if(e.key == "Enter" && e.altKey == true) {
+    if(e.key == "Enter" && e.altKey == true && e.shiftKey == true) {
         trocarId(e);
         descriptografar(textArea.value);
+    }
+
+    if(e.key == 'C' && e.altKey == true && e.shiftKey == true && trocar == false) {
+        if(bloqueiaCopiar) {
+            return;
+        }
+    
+        mensagem.select();
+        mensagem.setSelectionRange(0, mensagem.value.length);
+        document.execCommand("copy");
+
+        window.setTimeout(focar, 100);
     }
 });

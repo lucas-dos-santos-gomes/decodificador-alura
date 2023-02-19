@@ -20,10 +20,15 @@ function bloquearCopiar() {
     }
 }
 
-function botoesTransparentes() {
+function botoesTransparentes(e) {
     for(let i = 0; i < botoesHover.length; i++) {
         botoesHover[i].classList.toggle("transparente");
     }
+
+    if(e.type == "mouseout") {
+        textAreaHover.focus();
+    }
+
     bloquearCopiar();
 }
 
