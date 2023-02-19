@@ -22,7 +22,6 @@ body {
 main {
     display: flex;
     flex-direction: column;
-
     width: 100%;
 }
 
@@ -30,7 +29,6 @@ main .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     flex-grow: 1;
     flex-basis: auto;
 
@@ -78,6 +76,7 @@ main .container .botoes div {
 main .container .botoes div p {
     align-self: center;
     margin: 0 0 0 7px;
+    transition: 200ms color, 200ms font-weight;
 }
 
 main .container .botoes ul {
@@ -113,6 +112,10 @@ main .container .botoes ul li:last-child {
 main .container .botoes ul li:hover, .botao-copiar:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+main .container .botoes ul li:active, .botao-copiar:active {
+    transform: scale(1.01);
 }
 
 .transparente {
@@ -174,24 +177,29 @@ main .container .botoes ul li:hover, .botao-copiar:hover {
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.display-texto .container-mensagem p {
+.display-texto .container-mensagem .mensagem-cript {
+    width: 100%;
     height: 60vh;
+    overflow-wrap: break-word;
     overflow-y: auto;
+
+    outline:none;
+    resize:none;
 
     font-size: 2rem;
     color: #495057;
 }
 
-.display-texto .container-mensagem p::-webkit-scrollbar{
+.display-texto .container-mensagem .mensagem-cript::-webkit-scrollbar{
     width: 10px;
 }
 
-.display-texto .container-mensagem p::-webkit-scrollbar-track{
+.display-texto .container-mensagem .mensagem-cript::-webkit-scrollbar-track{
     background: #FFF;
     border-radius: 50px;
 }
 
-.display-texto .container-mensagem p::-webkit-scrollbar-thumb{
+.display-texto .container-mensagem .mensagem-cript::-webkit-scrollbar-thumb{
     background-color: #0A3871;
     border-radius: 20px;
     border: 3px solid #FFF;
