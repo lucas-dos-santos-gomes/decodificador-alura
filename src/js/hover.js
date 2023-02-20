@@ -21,11 +21,13 @@ function bloquearCopiar() {
 }
 
 function botoesTransparentes(e) {
-    for(let i = 0; i < botoesHover.length; i++) {
-        botoesHover[i].classList.toggle("transparente");
+    if(!mobile) {
+        for(let i = 0; i < botoesHover.length; i++) {
+            botoesHover[i].classList.toggle("transparente");
+        }
     }
 
-    if(e.type == "mouseout") {
+    if(e.type == "mouseout" && window.innerWidth > 768) {
         textAreaHover.focus();
     }
 
@@ -35,9 +37,13 @@ function botoesTransparentes(e) {
 botaoCopiarHover.addEventListener("mouseover", botoesTransparentes);
 botaoCopiarHover.addEventListener("mouseout", botoesTransparentes);
 
+
+
 botoesHover.forEach(e => {
     e.addEventListener("mouseover", function(evento) {
-        textAreaHover.blur();
+        if (window.innerWidth > 768) {
+            textAreaHover.blur();
+        }
         bloqueia = false;
         for(let i = 0; i < textAreaHover.value.length; i++) {
             if(caracteresPermitidos.indexOf(textAreaHover.value[i]) == "-1") {
@@ -55,21 +61,25 @@ botoesHover.forEach(e => {
             bloqueiaBotao = false;
         }
 
-        let classeBotao = evento.toElement.classList[0];
-        if(classeBotao == "botao1") {
-            botoesHover[1].classList.toggle("transparente");
-            botaoCopiarHover.classList.toggle("transparente");
-        } else if(classeBotao == "botao2") {
-            botoesHover[0].classList.toggle("transparente");
-            botaoCopiarHover.classList.toggle("transparente");
-        } else if(classeBotaoCopiar == "botao-copiar") {
-            botoesHover[0].classList.toggle("transparente");
-            botoesHover[1].classList.toggle("transparente");
+        if(!mobile) {
+            let classeBotao = evento.toElement.classList[0];
+            if(classeBotao == "botao1") {
+                botoesHover[1].classList.toggle("transparente");
+                botaoCopiarHover.classList.toggle("transparente");
+            } else if(classeBotao == "botao2") {
+                botoesHover[0].classList.toggle("transparente");
+                botaoCopiarHover.classList.toggle("transparente");
+            } else if(classeBotaoCopiar == "botao-copiar") {
+                botoesHover[0].classList.toggle("transparente");
+                botoesHover[1].classList.toggle("transparente");
+            }
         }
     });
 
     e.addEventListener("mouseout", () => {
-        textAreaHover.focus();
+        if (window.innerWidth > 768) {
+            textAreaHover.focus();
+        }
         msgAlerta.style.color = "#000";
         msgAlerta.style.fontWeight = "normal";
 

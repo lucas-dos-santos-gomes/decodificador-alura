@@ -52,6 +52,8 @@ function trocarId(e) {
         containerPadrao.setAttribute("id", "esconder");
     }
     trocar = false;
+
+    window.scroll(0,1000);
 }
 
 botoes.forEach(e => {
@@ -66,6 +68,9 @@ botaoCopiar.addEventListener("click", () => {
     mensagem.select();
     mensagem.setSelectionRange(0, mensagem.value.length);
     document.execCommand("copy");
+
+    window.scroll(0,-1000);
+    window.setTimeout(focar, 300)
 });
 
 function focar() {
@@ -96,6 +101,7 @@ textArea.addEventListener("keydown", e => {
         mensagem.setSelectionRange(0, mensagem.value.length);
         document.execCommand("copy");
 
-        window.setTimeout(focar, 100);
+        window.scroll(0,-1000);
+        window.setTimeout(focar, 300);
     }
 });

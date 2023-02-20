@@ -7,22 +7,35 @@
 html {
     font-size: 10px;
     background-color: #ACD3E9;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0A3871;
+    border-radius: 10px;
+    border: 2px solid #ACD3E9;
 }
 
 body {
     display: flex;
     flex-direction: row;
 
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 5vh 5vw;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 main {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 250px;
 }
 
 main .container {
@@ -54,16 +67,16 @@ main .container textarea::placeholder {
     color: #0A3871;
 }
 
-main .container textarea::-webkit-scrollbar{
+main .container textarea::-webkit-scrollbar {
     width: 10px;
 }
 
-main .container textarea::-webkit-scrollbar-track{
+main .container textarea::-webkit-scrollbar-track {
     background: #FFF;
     border-radius: 50px;
 }
 
-main .container textarea::-webkit-scrollbar-thumb{
+main .container textarea::-webkit-scrollbar-thumb {
     background-color: #0A3871;
     border-radius: 20px;
     border: 2px solid #FFF;
@@ -224,4 +237,50 @@ main .container .botoes ul li:active, .botao-copiar:active {
 
 #esconder {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+    main .container {
+        padding-left: 5vw;
+    }
+    main .container textarea {
+        margin-bottom: 20vh;
+    }
+    .display-texto {
+        width: 100%;
+        max-width: 100%;
+    }
+    .display-texto .container-padrao {
+        height: 100px;
+    }
+    .display-texto .container-padrao .img-procurando {
+        display: none;
+    }
+    .display-texto .container-padrao h2 {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main .container .botoes ul {
+        flex-direction: column;
+    }
+    main .container .botoes ul li {
+        width: 100%;
+    }
+    .display-texto .container-padrao {
+        height: auto;
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+    .display-texto .container-padrao h2 {
+        padding: 10% 0 0;
+    }
+    .display-texto .container-padrao p {
+        padding: 0 0 10%;
+    }
 }
