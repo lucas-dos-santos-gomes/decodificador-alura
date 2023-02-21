@@ -37,6 +37,8 @@ Principais características da aplicação:
 * Decodificar mensagens criptografadas por essa aplicação
 * Copiar a mensagem
 
+<img src="https://user-images.githubusercontent.com/106649118/220262550-706f775d-2ccf-4d00-a4e0-7170c9ff78a8.gif">
+
 
 ## Links
 
