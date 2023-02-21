@@ -1,4 +1,4 @@
-var mobile;
+export var mobile;
 var head = document.querySelector("head");
 var css = "body main .container .botoes ul li:hover, .container-mensagem .botao-copiar:hover { transform: scale(1.0) }";
 var style = document.createElement('style');

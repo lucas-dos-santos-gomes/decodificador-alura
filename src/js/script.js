@@ -1,11 +1,8 @@
+import { botoes, botaoCopiar, textArea, bloqueiaCopiar, bloqueiaBotao } from "./hover.js";
+
 const containerPadrao = document.querySelector(".container-padrao");
 const containerMensagem = document.querySelector(".container-mensagem");
-
-const textArea = document.querySelector(".area-texto");
 const mensagem = document.querySelector(".mensagem-cript");
-
-const botoes = document.querySelectorAll("li");
-const botaoCopiar = document.querySelector(".botao-copiar");
 
 var trocar = true;
 
@@ -74,7 +71,7 @@ botaoCopiar.addEventListener("click", () => {
 });
 
 function focar() {
-    textAreaHover.focus();
+    textArea.focus();
 }
 
 textArea.addEventListener("keydown", e => {
