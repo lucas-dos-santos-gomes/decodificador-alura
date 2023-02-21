@@ -3,7 +3,7 @@ const botaoCopiarHover = document.querySelector(".botao-copiar");
 const textAreaHover = document.querySelector(".area-texto");
 const msgAlerta = document.querySelector(".mensagem-alerta");
 
-const caracteresPermitidos = "abcdefghijklmnopqrstuvwxyz ";
+const caracteresPermitidos = "abcdefghijklmnopqrstuvwxyz \n";
 var bloqueiaBotao;
 var bloqueia;
 var bloqueiaCopiar;
