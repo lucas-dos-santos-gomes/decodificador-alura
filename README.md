@@ -1,6 +1,12 @@
 ![Logo do projeto](https://github.com/lucas-dos-santos-gomes/decodificador-alura/blob/main/src/img/logo-alura.svg) 
 <h1 align="center"> Decodificador de Textos - Alura </h1>
 
+
+![Shield Tag](https://img.shields.io/github/v/tag/lucas-dos-santos-gomes/decodificador-alura)
+![Shield Repo Size](https://img.shields.io/github/repo-size/lucas-dos-santos-gomes/decodificador-alura?color=gree)
+![Shield Stars](https://img.shields.io/github/stars/lucas-dos-santos-gomes/decodificador-alura?style=social)
+
+
 Primeiro desafio da trilha de lógica de programação da Alura no programa Oracle Next Education. 
 Esse projeto consiste em uma aplicação que faz uma criptografia simples de mensagens, além de conseguir fazer a descriptografia depois. 
 A aplicação foi modelada para ser utilizada em qualquer dispositivo, seja desktop's, laptop's, tablet's, smartphone's e etc.
