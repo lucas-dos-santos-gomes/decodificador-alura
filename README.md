@@ -50,7 +50,7 @@ Principais características da aplicação:
 
 Interface da aplicação em smartphones
 
-<div style="display: flex">
+<div style="display: flex" align="center">
   <img src="https://user-images.githubusercontent.com/106649118/220264586-f11b80bd-0b4b-41c7-8a0a-fd7fcf416342.jpg" width="30%">
   <img src="https://user-images.githubusercontent.com/106649118/220264583-ee5aa342-c645-4065-a1da-3ebc09334116.jpg" width="30%">
   <img src="https://user-images.githubusercontent.com/106649118/220264578-b7e839d5-1e00-487a-8faa-fbbbedffe263.jpg" width="30%">
@@ -77,5 +77,7 @@ Interface da aplicação em smartphones
 
 * **Lucas dos Santos Gomes**
 
-> <p> Me siga nas redes sociais. <br>
-> Obrigado por visitar meu projeto! </p>
+> <p> Me siga nas redes sociais e favorite esse projeto. <br>
+> Obrigado pela sua visita! </p>
+
+#alura #oracle #oraclenexteducation #challengeonedecodificador4
