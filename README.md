@@ -80,4 +80,7 @@ Interface da aplicação em smartphones
 > <p> Me siga nas redes sociais e favorite esse projeto. <br>
 > Obrigado pela sua visita! </p>
 
+. <br>
+. <br>
+. <br><br>
 #alura #oracle #oraclenexteducation #challengeonedecodificador4
