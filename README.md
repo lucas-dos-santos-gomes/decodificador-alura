@@ -73,6 +73,10 @@ Interface da aplicação em smartphones
 
 * v1.0.1
 
+## License
+
+[MIT](https://github.com/lucas-dos-santos-gomes/decodificador-alura/blob/main/LICENSE)
+
 ## Authors
 
 * **Lucas dos Santos Gomes**
